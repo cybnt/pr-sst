@@ -36,7 +36,7 @@ jobs:
     - name: Deploy to AWS
       run: |
         npm install -g sst
-        sst deploy
+        sst deploy --stage prod
       env:
         NODE_ENV: production
 
