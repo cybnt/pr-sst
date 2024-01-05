@@ -15,7 +15,7 @@ jobs:
       run: |
         sudo apt-get install -y awscli
         aws --version
-        
+
     - name: Checkout Repository
       uses: actions/checkout@v2
 
@@ -32,7 +32,7 @@ jobs:
       run: npm run build --if-present
 
     - name: Set up AWS CLI
-      uses: aws-actions/setup-aws-cli
+      uses: aws-actions/setup-aws-cli@v2
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
